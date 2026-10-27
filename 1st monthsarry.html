@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Monthsary 💙💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#6ec6ff; --blue-d:#2f7fd6; --pink:#ff8fc7; --pink-d:#e0559b;
+  --text:#2b3a67; --card:rgba(255,255,255,.72); --card-b:rgba(255,255,255,.9);
+  --bg1:#d4ecff; --bg2:#ffe0f0; --bg3:#e9d9ff;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--text:#f1f4ff;--card:rgba(30,32,70,.62);--card-b:rgba(255,255,255,.18);--bg1:#14234d;--bg2:#3a1745;--bg3:#241a55}
+}
+:root[data-theme="dark"]{--text:#f1f4ff;--card:rgba(30,32,70,.62);--card-b:rgba(255,255,255,.18);--bg1:#14234d;--bg2:#3a1745;--bg3:#241a55}
+*{box-sizing:border-box}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;min-height:100%;font-family:'Poppins',system-ui,sans-serif;color:var(--text);
+  background:linear-gradient(135deg,var(--bg1),var(--bg2) 55%,var(--bg3));background-attachment:fixed;overflow-x:hidden}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.hearts span{position:absolute;bottom:-40px;animation:rise linear infinite;opacity:.7}
+@keyframes rise{to{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+main{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:28px 18px 60px}
+.card{background:var(--card);border:1px solid var(--card-b);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-radius:26px;padding:26px 22px;margin-bottom:22px;box-shadow:0 12px 36px rgba(47,127,214,.18);animation:pop .8s both}
+.card:nth-child(2){animation-delay:.15s}.card:nth-child(3){animation-delay:.3s}.card:nth-child(4){animation-delay:.45s}
+@keyframes pop{from{opacity:0;transform:translateY(24px) scale(.96)}}
+.hero{text-align:center}
+.tag{font-size:.8rem;letter-spacing:.3em;text-transform:uppercase;color:var(--pink-d)}
+h1{font-family:'Dancing Script',cursive;font-size:clamp(2.6rem,12vw,4rem);margin:.1em 0;line-height:1.05;
+  background:linear-gradient(90deg,var(--blue-d),var(--pink-d));-webkit-background-clip:text;background-clip:text;color:transparent}
+.callsign{font-family:'Dancing Script',cursive;font-size:1.9rem;color:var(--blue-d)}
+.big{display:inline-block;margin:14px 0 4px;padding:8px 22px;border-radius:99px;color:#fff;font-weight:600;font-size:1.05rem;
+  background:linear-gradient(90deg,var(--blue-d),var(--pink-d));box-shadow:0 6px 18px rgba(224,85,155,.35);animation:beat 1.8s infinite}
+@keyframes beat{50%{transform:scale(1.06)}}
+.counter{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.counter div{padding:14px 6px;border-radius:18px;background:linear-gradient(160deg,rgba(110,198,255,.35),rgba(255,143,199,.35))}
+.counter b{display:block;font-size:1.7rem;color:var(--blue-d)}
+.counter small{font-size:.72rem;opacity:.85}
+.next{margin-top:14px;font-size:.88rem;opacity:.9}
+h2{font-family:'Dancing Script',cursive;font-size:2rem;margin:0 0 14px;color:var(--pink-d);text-align:center}
+.msg{padding:14px 16px;margin:10px 0;border-radius:18px;line-height:1.55;background:linear-gradient(120deg,rgba(110,198,255,.28),rgba(255,143,199,.28));
+  border-left:5px solid var(--pink);animation:pop .7s both}
+.msg:nth-child(even){border-left-color:var(--blue)}
+.frame{position:relative;margin:0 auto;max-width:360px;padding:10px;border-radius:22px;background:linear-gradient(135deg,var(--blue),var(--pink));
+  box-shadow:0 10px 28px rgba(0,0,0,.18);transform:rotate(-2deg)}
+.frame img{display:block;width:100%;border-radius:14px;aspect-ratio:4/5;object-fit:cover;background:#fff}
+.ph{display:grid;place-items:center;aspect-ratio:4/5;border-radius:14px;background:rgba(255,255,255,.8);color:#7a86b0;text-align:center;padding:20px;font-size:.95rem}
+.caption{margin:20px 4px 4px;text-align:center;font-family:'Dancing Script',cursive;font-size:1.6rem;line-height:1.35;color:var(--blue-d)}
+.sig{text-align:center;margin-top:16px;font-family:'Dancing Script',cursive;font-size:1.5rem;color:var(--pink-d)}
+details summary{cursor:pointer;text-align:center;font-weight:600;color:var(--blue-d);list-style:none}
+label{display:block;margin:14px 0 4px;font-size:.82rem;font-weight:600}
+input,textarea{width:100%;padding:11px 14px;border-radius:14px;border:2px solid transparent;font:inherit;color:#2b3a67;background:rgba(255,255,255,.92);
+  outline:none;transition:.2s}
+input:focus,textarea:focus{border-color:var(--pink)}
+textarea{min-height:120px;resize:vertical}
+button{margin-top:16px;padding:12px 22px;border:0;border-radius:99px;font:600 .95rem 'Poppins',sans-serif;color:#fff;cursor:pointer;
+  background:linear-gradient(90deg,var(--blue-d),var(--pink-d));box-shadow:0 6px 16px rgba(47,127,214,.3)}
+button:active{transform:scale(.97)}
+
+body.locked main{display:none}
+.lock{position:fixed;inset:0;z-index:5;display:none;place-items:center;padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(20px + env(safe-area-inset-bottom,0px));overflow:auto}
+body.locked .lock{display:grid}
+.lock .card{width:100%;max-width:400px;text-align:center;margin:0}
+.lock .em{font-size:3rem;animation:beat 1.8s infinite}
+.lock p{margin:6px 0 4px;font-size:.92rem}
+.err{min-height:1.4em;margin-top:12px;font-size:.88rem;color:var(--pink-d);font-weight:600}
+.shake{animation:shake .4s}
+@keyframes shake{20%,60%{transform:translateX(-9px)}40%,80%{transform:translateX(9px)}}
+.lock label{text-align:left}
+</style>
+</head>
+<body class="locked">
+<div class="lock" id="lock">
+  <div class="card" id="lockCard">
+    <div class="em">🔒💙💗</div>
+    <h2 style="margin-bottom:6px">Just For Us</h2>
+    <p>Only my darling can open this. Enter our secret to continue.</p>
+    <label for="pCs">Our callsign</label>
+    <input id="pCs" autocomplete="off" autocapitalize="none" placeholder="Type our callsign">
+    <label for="pDate">Our monthsary date</label>
+    <input id="pDate" type="date">
+    <button id="unlock">Unlock 💗</button>
+    <div class="err" id="err"></div>
+  </div>
+</div>
+<div class="hearts" id="hearts" aria-hidden="true"></div>
+<main>
+  <section class="card hero">
+    <div class="tag">Happy 1st Monthsary darling ko</div>
+    <h1>For My Darling 💙💗</h1>
+    <div class="callsign" id="cs"></div>
+    <div class="big" id="big"></div>
+    <div class="counter">
+      <div><b id="cM">1</b><small>months</small></div>
+      <div><b id="cD">0</b><small>days</small></div>
+      <div><b id="cT">0</b><small>total days</small></div>
+    </div>
+    <div class="next" id="next"></div>
+  </section>
+
+  <section class="card">
+    <h2>Messages For You</h2>
+    <div id="msgs"></div>
+  </section>
+
+  <section class="card">
+  <h2>Our Memory 📸</h2>
+  <div class="frame" id="frame"><img src="darling.jpg" alt="Our picture"></div>
+  <p class="caption" id="cap"></p>
+  <div class="sig" id="sig"></div>
+</section>
+
+  <section class="card">
+    <details>
+      <summary> iloveyou my darling koo mwuaaa!!😙❤️</summary>
+      <label for="iCs">Our callsign</label>
+      <input id="iCs" placeholder="e.g. Maverick &amp; Goose">
+      <label for="iDate">Monthsary date (September 27, 2026)</label>
+      <input id="iDate" type="date">
+      <label for="iMsgs">Messages (one line = one message)</label>
+      <textarea id="iMsgs"></textarea>
+      <label for="iCap">Message beside the picture</label>
+      <input id="iCap">
+      <label for="iPhoto">Your picture</label>
+      <input id="iPhoto" type="file" accept="image/*">
+      <button id="save">Save 💾</button>
+    </details>
+  </section>
+</main>
+
+<script>
+var KEY="monthsary_lock_v1";
+var LOCK_CS="darling",LOCK_DATE="2026-09-27";
+var d={
+  cs:"Darling",
+  date:"2026-09-27",
+  cap:"You are my favorite thing that ever happened to me. I love you so much! 💕",
+  msgs:[
+    "Thank you for your love, your understanding, and for being by my side every day. 💙",
+    "Every month with you is a gift I will never get tired of.",
+    "You are the reason I smile in the morning and the peace I find at night. 💗",
+    "No matter what happens, I will always choose you, today and forever.",
+    "Happy Monthsary, my darling! I love you so much. 🥰"
+  ],
+  photo:""
+};
+try{var s=JSON.parse(localStorage.getItem(KEY)||"null");if(s)for(var k in s)d[k]=s[k];}catch(e){}
+
+function $(i){return document.getElementById(i)}
+function render(){
+  $("cs").textContent="“"+d.cs+"”";
+  var st=new Date(d.date+"T00:00:00"),now=new Date(),t0=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  var m=(t0.getFullYear()-st.getFullYear())*12+t0.getMonth()-st.getMonth();
+  if(t0.getDate()<st.getDate())m--;
+  if(m<0)m=0;
+  var last=new Date(st.getFullYear(),st.getMonth()+m,st.getDate());
+  var days=Math.round((t0-last)/864e5),total=Math.max(0,Math.round((t0-st)/864e5));
+  var nxt=new Date(st.getFullYear(),st.getMonth()+m+1,st.getDate());
+  var left=Math.round((nxt-t0)/864e5);
+  var isDay=(t0.getDate()===st.getDate()&&m>0);
+  $("big").textContent=isDay?"🎉 Today is our "+m+(m===1?" month":" months")+" together! 🎉":(m+(m===1?" Month":" Months")+" Together");
+  $("cM").textContent=m;$("cD").textContent=days;$("cT").textContent=total;
+  $("next").textContent=isDay?"Happy Monthsary, my love! 💞":"Next monthsary in "+left+(left===1?" day":" days")+" 💞";
+  $("msgs").innerHTML="";
+  d.msgs.forEach(function(x,i){var p=document.createElement("div");p.className="msg";p.style.animationDelay=(i*.2)+"s";p.textContent=x;$("msgs").appendChild(p)});
+  $("cap").textContent=d.cap;
+  $("sig").textContent="— "+d.cs+" 💙💗";
+  if(d.photo){$("frame").innerHTML="";var im=new Image();im.src=d.photo;im.alt="Our picture";$("frame").appendChild(im)}
+}
+function fill(){$("iCs").value=d.cs;$("iDate").value=d.date;$("iMsgs").value=d.msgs.join("\n");$("iCap").value=d.cap}
+
+$("iPhoto").addEventListener("change",function(e){
+  var f=e.target.files[0];if(!f)return;
+  var r=new FileReader();
+  r.onload=function(){var im=new Image();im.onload=function(){
+    var sc=Math.min(1,900/Math.max(im.width,im.height)),c=document.createElement("canvas");
+    c.width=im.width*sc;c.height=im.height*sc;c.getContext("2d").drawImage(im,0,0,c.width,c.height);
+    d.photo=c.toDataURL("image/jpeg",.8);render();};im.src=r.result};
+  r.readAsDataURL(f);
+});
+$("save").addEventListener("click",function(){
+  d.cs=$("iCs").value.trim()||d.cs;
+  d.date=$("iDate").value||d.date;
+  d.msgs=$("iMsgs").value.split("\n").map(function(x){return x.trim()}).filter(Boolean);
+  d.cap=$("iCap").value.trim();
+  try{localStorage.setItem(KEY,JSON.stringify(d))}catch(e){}
+  render();window.scrollTo({top:0,behavior:"smooth"});
+});
+
+var H=["💙","💗","💖","💕","🩵","🩷"],hs=$("hearts");
+for(var i=0;i<18;i++){var h=document.createElement("span");h.textContent=H[i%H.length];
+  h.style.left=Math.random()*100+"%";h.style.fontSize=(14+Math.random()*22)+"px";
+  h.style.animationDuration=(8+Math.random()*10)+"s";h.style.animationDelay=(-Math.random()*14)+"s";hs.appendChild(h)}
+function tryUnlock(){
+  var ok=$("pCs").value.trim().toLowerCase()===LOCK_CS&&$("pDate").value===LOCK_DATE;
+  if(ok){document.body.classList.remove("locked");window.scrollTo(0,0);return}
+  $("err").textContent="Oops, that’s not it. Try again 💔";
+  var c=$("lockCard");c.classList.remove("shake");void c.offsetWidth;c.classList.add("shake");
+}
+$("unlock").addEventListener("click",tryUnlock);
+$("pCs").addEventListener("keydown",function(e){if(e.key==="Enter")tryUnlock()});
+fill();render();
+</script>
+</body>
+</html>
